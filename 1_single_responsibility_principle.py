@@ -71,7 +71,7 @@ animal properties management.
 class Animal:
     def __init__(self, name: str):
         self.name = name
-        self.fb = AnimalDB()
+        self.db = AnimalDB()
 
     def get_name(self) -> str:
         return self.name
@@ -82,7 +82,7 @@ class Animal:
     def save(self):
         self.db.save(animal=self)
 
+
 """
 The most important methods are kept in the Animal class and used as Facade for the lesser functions.
 """
-

@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "solid-python-guide"
+version = "0.1.0"
+description = ""
+authors = ["n.hung19920@gmail.com"]
+
+[tool.poetry.dependencies]
+python = "^3.7.2"
+black = "^22.8.0"
+pylint = "^2.15.2"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 79
+skip-string-normalization = true
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+
